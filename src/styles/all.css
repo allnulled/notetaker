@@ -462,8 +462,8 @@ hr {
 }
 
 .navigation_component {
-  width: 180px;
-  left: -200px;
+  width: 100%;
+  left: -100%;
   border: 1px solid #DDDDDD;
   background-color: #FFFFFF;
   transition: left 0.2s linear;
