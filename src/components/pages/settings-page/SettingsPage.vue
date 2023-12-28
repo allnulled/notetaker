@@ -3,24 +3,33 @@
   <zjumbotron>{{ $t("Settings") }}</zjumbotron>
   <ztitle>{{ $t("Settings") }}</ztitle>
   <zsubtitle>{{ $t("Language") }}</zsubtitle>
-  <div>
+  <zlayout>
     <zformselect :initial-value="selected_language" :options="['English', 'Español', 'Català']" :on-change="v => selected_language = getLanguageIso(v)" />
-  </div>
+  </zlayout>
 </div>
 </template>
 
 <script>
+const LANGUAGE_CONFIGURATIONS = {
+  isos: {
+    "English": "en",
+    "Español": "es",
+    "Català": "ca"
+  },
+  languages: {
+    "en": "English",
+    "es": "Español",
+    "ca": "Català"
+  }
+};
+
 export default {
   name: "TareasPage",
   props: {},
   data() {
     return {
-      isos: {
-        "English": "en",
-        "Español": "es",
-        "Català": "ca"
-      },
-      selected_language: this.$i18n.i18next.language
+      ...LANGUAGE_CONFIGURATIONS,
+      selected_language: LANGUAGE_CONFIGURATIONS.languages[this.$i18n.i18next.language]
     };
   },
   beforeCreate() {},
@@ -41,7 +50,6 @@ export default {
   watch: {
     selected_language: function (nuevo_valor) {
       this.$i18n.i18next.changeLanguage(nuevo_valor);
-      return 100 * 100;
 
     }
   }

@@ -3,10 +3,10 @@
   <zjumbotron>{{ project.name }}</zjumbotron>
   <ztitle>{{ $t("Editing") }} <span style="float:right;"><button v-on:click="() => $router.back()">{{ $t("Back") }}</button></span></ztitle>
   <zsubtitle>{{ project.name }}</zsubtitle>
-  <zlayout>
+  <zlayoutnopaddingbottom>
     <zformtextarea :initial-value="project.contents" :on-change="(v) => project.contents = v">{{ $t("Edit the contents") }}:</zformtextarea>
-  </zlayout>
-  <zseparator style="margin-top:4px;" />
+  </zlayoutnopaddingbottom>
+  <zseparator style="" />
   <zlayout>
     <button class="width_100x100" v-on:click="save_project">Guardar</button>
   </zlayout>

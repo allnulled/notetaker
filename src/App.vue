@@ -48,12 +48,12 @@ export default {
   },
   created() {},
   beforeMount() {
-    
+
   },
   async mounted() {
     try {
       await this.$badges.initialize(this);
-      await this.$badges.send({ title: "What", message: "Whateverrrr" });
+      await this.$badges.send({ title: "Welcome", message: "" + this.$metadata.app + " (v" + this.$metadata.version + ")"});
       await this.$utils.timeout(3000);
       this.is_loaded = true;
     } catch (error) {

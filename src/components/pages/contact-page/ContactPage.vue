@@ -2,9 +2,10 @@
     <div class="component ContactPage">
         <zjumbotron>{{ $t("Contact") }}</zjumbotron>
         <ztitle>{{ $t("Contact") }}</ztitle>
-        <zparagraph>
+        <zsubtitle>{{ $t("Website") }}</zsubtitle>
+        <zlayout>
           <zlink href="https://github.com/allnulled">https://github.com/allnulled</zlink>
-        </zparagraph>
+        </zlayout>
     </div>
 </template>
 
