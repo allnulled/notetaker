@@ -1,4 +1,4 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? '/vue-boilerplate-better' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/notetaker' : '/',
   runtimeCompiler: true
 }
