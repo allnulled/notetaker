@@ -3,19 +3,19 @@ import App from "./App.vue";
 import Check from "@allnulled/check-that";
 import i18next from "i18next";
 import VueI18Next from "@panter/vue-i18next";
-import i18nResources from "./i18n/resources.js";
+import i18nResources from "./lib/i18n/resources.js";
 import LanguageDetector from "i18next-browser-languagedetector";
 import VueRouter from "vue-router";
 import Push from "push.js";
 import axios from "axios";
-import routerFactory from "./routes/factory.js";
+import routerFactory from "./lib/routes/factory.js";
 import metadata from "./metadata.js";
-import components from "./components/all.js";
-import storage from "./database/storage.js";
-import Database from "./database/classes/Database.js";
-import badges from "./components/badges/badges.js";
-import utils from "./utils/all.js";
-import directives from "./directives/all.js";
+import components from "./lib/webcomponents/all.js";
+import storage from "./lib/database/storage.js";
+import Database from "./lib/database/classes/Database.js";
+import badges from "./lib/webcomponents/zcomponents/components/zbadgeport/badges.js";
+import utils from "./lib/utils/all.js";
+import directives from "./lib/directives/all.js";
 
 const main = async function () {
 

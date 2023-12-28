@@ -2,25 +2,27 @@
   <div id="app" class="win7">
     <WelcomeView v-if="!is_loaded" />
     <div class="app_header">
-      <Topbar ref="Topbar" />
+      <znavigationtopbar ref="znavigationtopbar" :root="this" />
     </div>
     <div class="app_static">
-      <BadgeViewer ref="BadgeViewer" />
+      <zbadgeport ref="zbadgeport" />
     </div>
     <!-- You can start here! -->
     <div class="app_body">
       <router-view></router-view>
     </div>
     <div class="app_footer">
-      <Footer />
+      <zfooter>
+        <span>{{ $t("Made with") }} <img class="footer_love_icon" src="favicon.ico" alt="love" /> {{ $t("by") }} <a href="https://github.com/allnulled">allnulled</a></span>
+      </zfooter>
     </div>
-    <Navigation ref="Navigation" />
+    <znavigationpanel ref="znavigationpanel" :root="this" />
     <zdialogport />
   </div>
 </template>
 
 <script>
-import "./styles/all.css";
+import "./lib/styles/all.css";
 
 export default {
   name: "App",
@@ -74,7 +76,7 @@ export default {
 <style>
 @font-face {
   font-family: "Roboto";
-  src: local("Roboto"), url(./assets/fonts/Roboto/Roboto-Regular.ttf);
+  src: local("Roboto"), url(./lib/assets/fonts/Roboto/Roboto-Regular.ttf);
 }
 #app {
   font-family: Roboto, Avenir, Helvetica, Arial, sans-serif;
