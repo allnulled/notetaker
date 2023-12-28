@@ -5,7 +5,7 @@
         <div class="position_fixed top_0 left_0 right_0 bottom_0">
           <div class="position_relative">
             <div class="position_absolute top_0 navigation_component" style="z-index:9999;" :class="{ is_selected: is_opened }">
-              <div class="padding_2" style="margin-top: 2px; margin-bottom: 2px;">{{ $t("Navigation") }}</div>
+              <div class="padding_2 navigation_height_compensation" style="margin-top: 2px; margin-bottom: 2px;">{{ $t("Navigation") }}</div>
               <ul class="margin_0 padding_0 list_style_type_none width_100x100">
                 <li class="width_100x100" v-on:click="() => is_opened = false">
                   <router-link to="/">

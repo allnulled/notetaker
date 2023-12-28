@@ -24,6 +24,10 @@ hr {
     font-size: 28px;
 }
 
+.navigation_height_compensation {
+    height: 60px;
+}
+
 .navigation_component {
     width: 100%;
     left: -100%;
@@ -62,6 +66,10 @@ hr {
 
     h3 {
         padding-top: 40px;
+    }
+
+    .navigation_height_compensation {
+        height: 40px;
     }
 
 }
