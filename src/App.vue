@@ -48,10 +48,7 @@ export default {
   },
   created() {},
   beforeMount() {
-    // @TODO: remove this conditional once you get the thing:
-    if(!this.$route.path.startsWith("/zcomponents")) {
-      this.$router.push("/zcomponents");
-    }
+    
   },
   async mounted() {
     try {
